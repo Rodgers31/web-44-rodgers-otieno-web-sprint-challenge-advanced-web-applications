@@ -32,9 +32,9 @@ const Login = () => {
         if (err.response.status === 403) {
           setError("Username or Password not valid.");
         }
-        // console.log(err.message);
       });
   };
+  
   return (
     <div className="login-form">
       <h1>Bubbles!</h1>
