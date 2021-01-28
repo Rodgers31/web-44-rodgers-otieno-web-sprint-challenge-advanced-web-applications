@@ -2,7 +2,9 @@
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
-This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **advanced web applications**. During this sprint, you studied **React testing, client-side auth, HTTP methods, and Ziet**. In your challenge this week, you will demonstrate your mastery of these skills by creating **a login page**.
+This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **advanced web applications**. During this sprint, you studied **React testing, client-side auth, HTTP methods, and Vercel**. 
+
+In your challenge this week, you will demonstrate your mastery of these skills by creating **a login page** and **basic CRUD application.**
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
@@ -59,11 +61,11 @@ Build a login form to authenticate your users.
 
 #### API Documentation
 
-  * **[POST]** * to `http://localhost:5000/api/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
-  * **[GET]** to `http://localhost:5000/api/api/colors`: returns the list of colors and their hex codes.
-  * **[POST]** to `http://localhost:5000/api/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`).
-  * **[PUT]** to `http://localhost:5000/api/api/colors/:id`: updates the color using the `id` passed as part of the URL. Send the color object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
-  * **[DELETE]** to `http://localhost:5000/api/api/colors/123`: removes the color using the `id` passed as part of the URL (123 in example).
+  * **[POST]** * to `http://localhost:5000/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
+  * **[GET]** to `http://localhost:5000/api/colors`: returns the list of colors and their hex codes.
+  * **[POST]** to `http://localhost:5000/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`).
+  * **[PUT]** to `http://localhost:5000/api/colors/:id`: updates the color using the `id` passed as part of the URL. Send the color object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
+  * **[DELETE]** to `http://localhost:5000/api/colors/123`: removes the color using the `id` passed as part of the URL (123 in example).
 
 #### Stage 3 Testing
 - [ ] Finish the test in `BubblePage.test.js` to test that your app is fetching the bubble data from the API
