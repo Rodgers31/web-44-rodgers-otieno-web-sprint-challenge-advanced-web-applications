@@ -1,68 +1,21 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { useHistory } from "react-router-dom";
+import React from "react";
 
 const Login = () => {
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
-  const history = useHistory();
-  const [formValues, setFormValues] = useState({
-    // username: "Lambda School",
-    // password: "i<3Lambd4",
-    username: "",
-    password: ""
-  });
-
-  const [error, setError] = useState("");
-
-  const handleChanges = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
-  };
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    axios
-      .post("http://localhost:5000/api/login", formValues)
-      .then((res) => {
-        localStorage.setItem("token", res.data.payload);
-        setError("");
-        history.push("/bubbles");
-      })
-      .catch((err) => {
-        if (err.response.status === 403) {
-          setError("Username or Password not valid.");
-        }
-      });
-  };
-  
   return (
-    <div className="login-form">
-      <h1>Bubbles!</h1>
-      <form onSubmit={handleLogin}>
-        <label htmlFor="username">username:</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          value={formValues.username}
-          onChange={handleChanges}
-        />
-      
-        <label htmlFor="password">password:</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          value={formValues.password}
-          onChange={handleChanges}
-        />
-
-        <p className="error">{error}</p>
-
-        <button className="button">Login</button>
-      </form>
-    </div>
+    <>
+      <h1>Welcome to the Bubble App!</h1>
+      <p>Build a login page here</p>
+    </>
   );
 };
 
 export default Login;
+
+//Task List:
+//1. Build a form containing a username and password field.
+//2. Add whatever state nessiary for form functioning.
+//3. MAKE SURE THAT FORM INPUTS INCLUDE THE LABEL TEST "username" and "password" RESPECTIVELY.
+//4. If either the username or password is not displaied display EXACTLY the following words: Username or Password not valid.
+//5. If the username / password is equal to Lambda School / i<3Lambd4, save that token to localStorage.
